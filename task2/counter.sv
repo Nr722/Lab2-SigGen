@@ -9,13 +9,17 @@ module counter #(
     output logic [WIDTH-1:0] count2  // Count output
 );
 
-
+initial 
+    begin
+        count1 <= {WIDTH{1'b0}};
+        count2 <= {WIDTH{1'b0}};
+    end
 always_ff @ (posedge clk)
-    //if (rst) count <= {WIDTH{1'b0}};
+        
     if (en)
     begin
     count1 <= count1 + 1;
-    count2 <= count1 + diff; //forms width-1 bits of 0
+    count2 <= count1 + diff;
     end
 
     else
@@ -24,3 +28,4 @@ always_ff @ (posedge clk)
         count2 <= count2;
     end
 endmodule
+

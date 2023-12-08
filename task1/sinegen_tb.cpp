@@ -37,8 +37,8 @@ int main (int argc, char **argv, char **ev){
           top->clk = !top->clk;
           top->eval ();
         }
-  //  top->incr = 1;
-    top->incr = vbdValue(); //not sure what this does
+    top->incr = 1;
+//    top->incr = vbdValue();
 
     //plot ROM output and print cycle
     vbdPlot(int (top->dout), 0, 255);
@@ -52,3 +52,5 @@ int main (int argc, char **argv, char **ev){
     tfp->close();
     exit(0);
 }
+
+

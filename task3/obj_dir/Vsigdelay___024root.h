@@ -15,6 +15,7 @@ class Vsigdelay___024root final : public VerilatedModule {
     // DESIGN SPECIFIC STATE
     VL_IN8(clk,0,0);
     VL_IN8(rst,0,0);
+    VL_IN8(en,0,0);
     VL_IN8(wr,0,0);
     VL_IN8(rd,0,0);
     VL_IN8(mic_signal,7,0);

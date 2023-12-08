@@ -3,7 +3,7 @@
 #include "Vsigdelay.h"
 
 #include "vbuddy.cpp"     // include vbuddy code
-#define MAX_SIM_CYC 1000000
+#define MAX_SIM_CYC 10000000
 #define ADDRESS_WIDTH 9
 #define RAM_SZ pow(2,ADDRESS_WIDTH)
 
@@ -28,6 +28,7 @@ int main(int argc, char **argv, char **env) {
   // initialize simulation input 
   top->clk = 1;
   top->rst = 0;
+  top->en -1;
   top->wr = 1;
   top->rd = 1;
   top->offset = 1;
@@ -48,7 +49,7 @@ int main(int argc, char **argv, char **env) {
 
     // plot RAM input/output, send sample to DAC buffer, and print cycle count
     vbdPlot(int (top->mic_signal), 0, 255);
-//    vbdPlot(int (top->delayed_signal), 0, 255);
+    //vbdPlot(int (top->delayed_signal), 0, 255);
     vbdCycle(simcyc+1);
 
     // either simulation finished, or 'q' is pressed
@@ -61,3 +62,4 @@ int main(int argc, char **argv, char **env) {
   printf("Exiting\n");
   exit(0);
 }
+

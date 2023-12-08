@@ -3,7 +3,7 @@
 #include "verilated_vcd_c.h"
 
 #include "vbuddy.cpp"     // include vbuddy code
-#define MAX_SIM_CYC 1000000
+#define MAX_SIM_CYC 10000000
 #define ADDRESS_WIDTH 8
 #define ROM_SZ 256
 
@@ -24,7 +24,7 @@ int main (int argc, char **argv, char **ev){
 
     //init Vbuddy
     if(vbdOpen()!=1) return (-1);
-    vbdHeader("lab 2: Sinegen");
+    vbdHeader("Nour");
     //initialize simulation inputs
     top->clk = 1;
     top->rst = 0;

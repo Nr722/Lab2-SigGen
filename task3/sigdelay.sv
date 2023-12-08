@@ -5,12 +5,10 @@ module sigdelay #(
     //interface signals
     input logic clk,
     input logic rst,
-//    input logic en,
+    input logic en,
     input logic wr,
     input logic rd,
     input logic [D_WIDTH-1:0] mic_signal,
-    //input logic wr_addr,
-    //input logic rd_addr,
     input logic [D_WIDTH-1:0] offset,
     input logic count1,
     input logic count2,
@@ -24,6 +22,7 @@ module sigdelay #(
 counter addrCounter(
     .clk (clk),
     .rst (rst),
+    .en(en),
     .offset(offset),
     .count1 (address1),
     .count2 (address2)

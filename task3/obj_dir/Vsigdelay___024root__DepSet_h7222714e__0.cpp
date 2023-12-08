@@ -63,6 +63,8 @@ void Vsigdelay___024root___eval_debug_assertions(Vsigdelay___024root* vlSelf) {
         Verilated::overWidthError("clk");}
     if (VL_UNLIKELY((vlSelf->rst & 0xfeU))) {
         Verilated::overWidthError("rst");}
+    if (VL_UNLIKELY((vlSelf->en & 0xfeU))) {
+        Verilated::overWidthError("en");}
     if (VL_UNLIKELY((vlSelf->wr & 0xfeU))) {
         Verilated::overWidthError("wr");}
     if (VL_UNLIKELY((vlSelf->rd & 0xfeU))) {

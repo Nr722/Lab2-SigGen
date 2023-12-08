@@ -13,6 +13,7 @@ Vsigdelay::Vsigdelay(VerilatedContext* _vcontextp__, const char* _vcname__)
     , vlSymsp{new Vsigdelay__Syms(contextp(), _vcname__, this)}
     , clk{vlSymsp->TOP.clk}
     , rst{vlSymsp->TOP.rst}
+    , en{vlSymsp->TOP.en}
     , wr{vlSymsp->TOP.wr}
     , rd{vlSymsp->TOP.rd}
     , mic_signal{vlSymsp->TOP.mic_signal}

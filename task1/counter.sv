@@ -9,9 +9,14 @@ module counter#(
     output logic [WIDTH-1:0]    count   //count output
 );
 
+initial 
+    begin
+        count <= {WIDTH{1'b0}};
+    end
+
 always_ff @ (posedge clk)
- if (rst) count <= {WIDTH{1'b0}};
- else if (en) count <= count + incr; //forms width-1 bits of 0
- else count <= count;
+
+    if (en) count <= count + incr;
+    else count <= count;
 endmodule
 

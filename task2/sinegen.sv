@@ -13,7 +13,7 @@ module sinegen #(
 );
 
     logic [A_WIDTH-1:0] address1; //interconnect wire
-    logic [A_WIDTH-1:0] address2;
+    logic [A_WIDTH-1:0] address2; // interconnect wire
 
 counter addrCounter(
     .clk (clk),

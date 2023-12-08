@@ -6,12 +6,24 @@
 
 #include "Vsigdelay___024root.h"
 
+VL_ATTR_COLD void Vsigdelay___024root___initial__TOP__0(Vsigdelay___024root* vlSelf) {
+    if (false && vlSelf) {}  // Prevent unused
+    Vsigdelay__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
+    VL_DEBUG_IF(VL_DBG_MSGF("+    Vsigdelay___024root___initial__TOP__0\n"); );
+    // Body
+    vlSelf->sigdelay__DOT__address1 = 0U;
+    vlSelf->sigdelay__DOT__address2 = 0U;
+}
+
 VL_ATTR_COLD void Vsigdelay___024root___eval_initial(Vsigdelay___024root* vlSelf) {
     if (false && vlSelf) {}  // Prevent unused
     Vsigdelay__Syms* const __restrict vlSymsp VL_ATTR_UNUSED = vlSelf->vlSymsp;
     VL_DEBUG_IF(VL_DBG_MSGF("+    Vsigdelay___024root___eval_initial\n"); );
     // Body
     vlSelf->__Vclklast__TOP__clk = vlSelf->clk;
+    Vsigdelay___024root___initial__TOP__0(vlSelf);
+    vlSelf->__Vm_traceActivity[1U] = 1U;
+    vlSelf->__Vm_traceActivity[0U] = 1U;
 }
 
 VL_ATTR_COLD void Vsigdelay___024root___eval_settle(Vsigdelay___024root* vlSelf) {
@@ -33,6 +45,7 @@ VL_ATTR_COLD void Vsigdelay___024root___ctor_var_reset(Vsigdelay___024root* vlSe
     // Body
     vlSelf->clk = VL_RAND_RESET_I(1);
     vlSelf->rst = VL_RAND_RESET_I(1);
+    vlSelf->en = VL_RAND_RESET_I(1);
     vlSelf->wr = VL_RAND_RESET_I(1);
     vlSelf->rd = VL_RAND_RESET_I(1);
     vlSelf->mic_signal = VL_RAND_RESET_I(8);

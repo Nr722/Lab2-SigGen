@@ -20,6 +20,8 @@ VL_ATTR_COLD void Vsinegen___024root___initial__TOP__0(Vsinegen___024root* vlSel
     VL_READMEM_N(true, 8, 256, 0, VL_CVT_PACK_STR_NW(3, __Vtemp_ha00c3b92__0)
                  ,  &(vlSelf->sinegen__DOT__sineRom__DOT__rom_array)
                  , 0, ~0ULL);
+    vlSelf->sinegen__DOT__address1 = 0U;
+    vlSelf->sinegen__DOT__address2 = 0U;
 }
 
 VL_ATTR_COLD void Vsinegen___024root___eval_initial(Vsinegen___024root* vlSelf) {

@@ -13,13 +13,10 @@ VL_INLINE_OPT void Vsinegen___024root___sequent__TOP__0(Vsinegen___024root* vlSe
     // Body
     vlSelf->dout = vlSelf->sinegen__DOT__sineRom__DOT__rom_array
         [vlSelf->sinegen__DOT__address];
-    vlSelf->sinegen__DOT__address = ((IData)(vlSelf->rst)
-                                      ? 0U : (0xffU 
-                                              & ((IData)(vlSelf->en)
-                                                  ? 
-                                                 ((IData)(vlSelf->sinegen__DOT__address) 
+    vlSelf->sinegen__DOT__address = (0xffU & ((IData)(vlSelf->en)
+                                               ? ((IData)(vlSelf->sinegen__DOT__address) 
                                                   + (IData)(vlSelf->incr))
-                                                  : (IData)(vlSelf->sinegen__DOT__address))));
+                                               : (IData)(vlSelf->sinegen__DOT__address)));
 }
 
 void Vsinegen___024root___eval(Vsinegen___024root* vlSelf) {
